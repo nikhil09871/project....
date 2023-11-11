@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The iPhone Store - Welcome</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>The iPhone Store</h1>
+    <p>Your One-Stop Shop for iPhones and Accessories</p>
+</header>
+
+<nav>
+    <a href="#" onclick="showContent('home')">Home</a>
+    <a href="#" onclick="showContent('products')">Products</a>
+    <a href="#" onclick="showContent('about')">About Us</a>
+    <a href="#" onclick="showContent('contact')">Contact Us</a>
+</nav>
+
+<div class="content" id="home">
+    <h2>Welcome to The iPhone Store</h2>
+    <p>Explore our latest iPhones and accessories. Your satisfaction is our priority!</p>
+    <div class="featured-products">
+        <h3>Featured Products</h3>
+        <div class="product-list">
+            <div class="product">
+                <img src="images/iphone-14.jpg" alt="iPhone 14">
+                <p>iPhone 14</p>
+                <p class="price">$999</p>
+            </div>
+            <div class="product">
+                <img src="images/iphone 14 plus.jpg" alt="iPhone 14 Plus">
+                <p>iPhone 14 Plus</p>
+                <p class="price">$1099</p>
+            </div>
+            <div class="product">
+                <img src="images/iphone 15 plus.webp" alt="iPhone 15">
+                <p>iPhone 15</p>
+                <p class="price">$1199</p>
+            </div>
+            <div class="product">
+                <img src="images/iphone 15.avif" alt="iPhone 15 Plus">
+                <p>iPhone 15 Plus</p>
+                <p class="price">$1299</p>
+            </div>
+            <div class="product hot-deal">
+                <img src="images/iphone 15 pro 2.jpg" alt="iPhone 15 Pro">
+                <p>iPhone 15 Pro - Hot Deal</p>
+                <p class="price">$1399 <span class="discount">Now $1299</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content hidden" id="products">
+    <h2>Explore Our Products</h2>
+    
+    <div class="product">
+        <img src="images/iphone-14.jpg" alt="iPhone 14">
+        <p>iPhone 14</p>
+        <p class="price">$999</p>
+    </div>
+    
+    <div class="product">
+        <img src="images/iphone 14 plus.jpg" alt="iPhone 14 Plus">
+        <p>iPhone 14 Plus</p>
+        <p class="price">$1099</p>
+    </div>
+    
+    <div class="product">
+        <img src="images/iphone 15 plus.webp" alt="iPhone 15">
+        <p>iPhone 15</p>
+        <p class="price">$1199</p>
+    </div>
+    
+    <div class="product">
+        <img src="images/iphone 15.avif" alt="iPhone 15 Plus">
+        <p>iPhone 15 Plus</p>
+        <p class="price">$1299</p>
+    </div>
+
+    <h2>Hot Deal</h2>
+    
+    <div class="product hot-deal">
+        <img src="images/iphone 15 pro 2.jpg" alt="iPhone 15 Pro">
+        <p>iPhone 15 Pro - Hot Deal</p>
+        <p class="price">$1399 <span class="discount">Now $1299</span></p>
+    </div>
+</div>
+
+<div class="content hidden" id="about">
+    <h2>About The iPhone Store</h2>
+    <p>Welcome to The iPhone Store, where passion for technology meets unparalleled service. Established in 20XX, we have been at the forefront of providing cutting-edge iPhones and accessories to our valued customers.</p>
+    <p>At The iPhone Store, we take pride in our commitment to delivering the latest and greatest in Apple technology. Our team of dedicated professionals is here to ensure your experience with us is nothing short of exceptional.</p>
+    <p>Explore our store, discover the finest iPhones, and indulge in a world of innovation. Thank you for choosing The iPhone Store - Your Ultimate Destination for Apple Excellence.</p>
+    <h3>What Our Customers Say</h3>
+    <div class="reviews">
+        <div class="review">
+            <p>"Absolutely love the iPhone I purchased from The iPhone Store. Fantastic customer service and fast shipping!"</p>
+            <p class="author">- Happy Customer 1</p>
+        </div>
+        <div class="review">
+            <p>"The staff at The iPhone Store is incredibly knowledgeable and helped me find the perfect iPhone for my needs."</p>
+            <p class="author">- Satisfied Shopper 2</p>
+        </div>
+        <div class="review">
+            <p>"Great selection of accessories! I found everything I needed at The iPhone Store."</p>
+            <p class="author">- Tech Enthusiast 3</p>
+        </div>
+    </div>
+</div>
+
+<div class="content hidden" id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or need assistance? Reach out to us:</p>
+    <address>
+        123 Main Street, patna, Bihar
+    </address>
+    <p>Email: info@iphonestore.com</p>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    function showContent(id) {
+        var contentDivs = document.getElementsByClassName('content');
+        for (var i = 0; i < contentDivs.length; i++) {
+            contentDivs[i].classList.add('hidden');
+        }
+
+        var selectedDiv = document.getElementById(id);
+        selectedDiv.classList.remove('hidden');
+    }
+</script>
+
+</body>
+</html>
